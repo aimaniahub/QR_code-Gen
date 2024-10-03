@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+    <form action="/generate" method="POST" enctype="multipart/form-data">
+        <label for="text">Enter Text:</label><br>
+        <input type="text" name="text" id="text"><br><br>
+
+        <label for="social_link">Enter Social Link:</label><br>
+        <input type="url" name="social_link" id="social_link"><br><br>
+
+        <label for="image">Upload Image:</label><br>
+        <input type="file" name="image" id="image" accept="image/*"><br><br>
+
+        <label for="video">Upload Video:</label><br>
+        <input type="file" name="video" id="video" accept="video/*"><br><br>
+
+        <button type="submit">Generate QR Code</button>
+    </form>
+</body>
+</html>
